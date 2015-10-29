@@ -1,0 +1,7 @@
+(:name color-theme-tangotango-improve
+       :website "https://github.com/emitX/color-theme-tangotango.git"
+       :description "Improve color-theme-tangotango."
+       :type github
+       :pkgname "emitX/color-theme-tangotango"
+       :branch "master"
+       :minimum-emacs-version "24.4")
