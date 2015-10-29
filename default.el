@@ -16,6 +16,9 @@
 ;;evil
 (load-file "~/e-evil.el")
 
+;;magit
+;;(setq magit-git-executable "C:\\Program Files (x86)\\Git\\bin\\git.exe")
+
 ;;color theme
 ;;(add-to-list 'load-path "~/.emacs.d/el-get/color-tangotango-improve")
 ;;copy tangotango-theme.elc to ~/.emacs.d
