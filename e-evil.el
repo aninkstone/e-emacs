@@ -107,16 +107,20 @@
 
 (evil-mode 1)
 
-;;;; enable hightlight-symbol
-;;(add-to-list 'load-path "~/.emacs.d/addons.st/highlight-symbol")
-;;(require 'highlight-symbol)
-;;
 ;;;;disable evil default leader map
-;;(define-key evil-motion-state-map "\\" nil)
-;;(define-key evil-motion-state-map "\\be" 'evil-show-files)
-;;(define-key evil-motion-state-map "\\bb" 'buffer-menu)
-;;(define-key evil-motion-state-map "\\bs" 'neotree-toggle)
-;;(define-key evil-motion-state-map (kbd "C-6") 'evil-buffer)
+(define-key evil-motion-state-map "\\" nil)
+(define-key evil-motion-state-map "\\be" 'evil-show-files)
+(define-key evil-motion-state-map "\\bb" 'buffer-menu)
+(define-key evil-motion-state-map "\\bs" 'neotree-toggle)
+(define-key evil-motion-state-map (kbd "C-6") 'evil-buffer)
+
+;;helm key binding
+(define-key evil-motion-state-map "\\gg" 'helm-gtags-find-tag)
+(define-key evil-motion-state-map "\\gr" 'helm-gtags-find-rtag)
+
+;;magit key binding
+(define-key evil-motion-state-map "\\gs" 'magit-status)
+(define-key evil-motion-state-map "\\gl" 'magit-log)
 
 ;;Hightlight symbol
 ;;(define-key evil-motion-state-map "\\m" 'highlight-symbol-at-point)
@@ -126,9 +130,9 @@
 ;;(define-key evil-motion-state-map "\\gs" 'magit-status)
 ;;(define-key evil-motion-state-map "\\gl" 'magit-log)
 
-;;Helm key map
-;;helm-do-grep
-;;(define-key evil-motion-state-map "\\at" 'anything-do-grep)
-
 ;;(defun evil-switch-recently-buffer 
 ;;  (setq evil-mo))
+
+;;;; enable hightlight-symbol
+;;(add-to-list 'load-path "~/.emacs.d/addons.st/highlight-symbol")
+;;(require 'highlight-symbol)

@@ -29,6 +29,8 @@
 (global-set-key (kbd "C-\\") 'master-sense-map)
 (define-key master-sense-map (kbd "C-\\") 'execute-extended-command)
 (define-key master-sense-map (kbd "r") 'rgrep)
+(define-key master-sense-map (kbd "gg") 'helm-gtags-find-tag)
+(define-key master-sense-map (kbd "gr") 'helm-gtags-find-rtag)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
