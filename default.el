@@ -22,6 +22,7 @@
    helm                  ; helm
    helm-gtags            ; helm-gtags
    auto-complete         ; complete as you type with overlays
+   ido-vertical-mode     ; ido vertical
    color-theme-tangotango-improve))   ; check out color-theme-solarized
 
 ;; Some recipes require extra tools to be installed
@@ -114,4 +115,4 @@
 (setq split-height-threshold 0)
 (setq split-width-threshold nil)
 
-(set-face-attribute 'default nil :family "Inconsolata" :height 245 :weight 'normal)
+(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
