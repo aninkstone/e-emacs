@@ -1,5 +1,4 @@
 ;;this is the emacs config file
-
 ;;el-get config
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -13,21 +12,33 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (el-get 'sync)
 
-;;evil
-(load-file "~/e-evil.el")
+(setq el-get-user-package-directory "~/.emacs.d/package.el/")
+;;set our own packages 
+(setq
+ emitX:el-get-packages
+ '(el-get                ; el-get is self-hosting
+   evil                  ; vi emulator
+   magit                 ; emacs git client
+   helm                  ; helm
+   helm-gtags            ; helm-gtags
+   auto-complete         ; complete as you type with overlays
+   color-theme-tangotango-improve))   ; check out color-theme-solarized
 
-;;magit
-;;(setq magit-git-executable "C:\\Program Files (x86)\\Git\\bin\\git.exe")
+;; Some recipes require extra tools to be installed
+;;
+;; Note: el-get-install requires git, so we know we have at least that.
+;;
+(setq emitX:el-get-packages
+      (append emitX:el-get-packages
+              (mapcar #'el-get-source-name el-get-sources)))
 
-;;color theme
-;;(add-to-list 'load-path "~/.emacs.d/el-get/color-tangotango-improve")
-;;copy tangotango-theme.elc to ~/.emacs.d
-(load-theme 'tangotango t)
+;; Install packages and init already installed packages
+(el-get 'sync emitX:el-get-packages)
 
-;;key bindind
+;;default key rebindind
 (define-prefix-command 'master-sense-map)
 (global-set-key (kbd "C-\\") 'master-sense-map)
-(define-key master-sense-map (kbd "C-\\") 'execute-extended-command)
+(define-key master-sense-map (kbd "C-\\") 'helm-M-x)
 (define-key master-sense-map (kbd "r") 'rgrep)
 (define-key master-sense-map (kbd "gg") 'helm-gtags-find-tag)
 (define-key master-sense-map (kbd "gr") 'helm-gtags-find-rtag)
@@ -42,7 +53,7 @@
 
 (setq tab-stop-list 
       '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80
-	  84 88 92 96 100 104 108 112 116 120 124))
+      84 88 92 96 100 104 108 112 116 120 124))
 
 (funcall (lambda ()
   ;;this function will call at end of this file
@@ -58,11 +69,11 @@
 
 (setq auto-mode-alist
    (append
-    '(("\\.cc$"   	           . c++-mode)
-	 ("\\.cpp$"  	           . c++-mode)
-	 ("\\.ipp$"  	           . c++-mode)
-	 ("\\.hpp$"  	           . c++-mode)
-	 ("\\.h[r]?[0-9]*[a-z]?$"  . c++-mode))
+    '(("\\.cc$"                . c++-mode)
+     ("\\.cpp$"                . c++-mode)
+     ("\\.ipp$"                . c++-mode)
+     ("\\.hpp$"                . c++-mode)
+     ("\\.h[r]?[0-9]*[a-z]?$"  . c++-mode))
     auto-mode-alist))
 
 ;; Put this one at the front of the list to override the default
@@ -75,23 +86,24 @@
 (setq sgml-basic-offset 4)
 
 ;;show current time
-
 (display-time-mode 1)
 
 ;; set font on linux (ubuntu) 等宽字体设置
-(if (eq system-type 'gnu/linux)
-    (if (display-graphic-p)
-        (progn (set-default-font "Ubuntu Mono:pixelsize=16") 
-               (dolist (charset '(kana han symbol cjk-misc bopomofo)) 
-                 (set-fontset-font (frame-parameter nil 'font) 
-                                   charset 
-                                   (font-spec :family "WenQuanYi Micro Hei" :size 16))))))
+;;(if (eq system-type 'gnu/linux)
+;;    (if (display-graphic-p)
+;;        (progn (set-default-font "Ubuntu Mono:pixelsize=16") 
+;;               (dolist (charset '(kana han symbol cjk-misc bopomofo)) 
+;;                 (set-fontset-font (frame-parameter nil 'font) 
+;;                                   charset 
+;;                                   (font-spec :family "WenQuanYi Micro Hei" :size 16))))))
 
 (defalias 'make 'compile)
 (defalias 'fd   'find-name-dired)
 (defalias 'nu   'linum-mode)
 
-(setq user-full-name "Daniel C")
+;;(setq user-full-name "Daniel C")
+;;set default email address
+;;(setq user-mail-address "thatways.c@gmail.com") 
 
 ;;;Intent setup
 (defun long-arguments-indent-setup () (c-set-offset 'arglist-intro '+))
@@ -101,3 +113,5 @@
 ;;;force vertical split
 (setq split-height-threshold 0)
 (setq split-width-threshold nil)
+
+(set-face-attribute 'default nil :family "Inconsolata" :height 245 :weight 'normal)

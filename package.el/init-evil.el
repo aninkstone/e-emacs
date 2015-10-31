@@ -109,12 +109,11 @@
 
 ;;;;disable evil default leader map
 (define-key evil-motion-state-map "\\" nil)
-(define-key evil-motion-state-map "\\be" 'evil-show-files)
 (define-key evil-motion-state-map "\\bb" 'buffer-menu)
-(define-key evil-motion-state-map "\\bs" 'neotree-toggle)
 (define-key evil-motion-state-map (kbd "C-6") 'evil-buffer)
 
 ;;helm key binding
+(define-key evil-motion-state-map "\\be" 'helm-buffers-list)
 (define-key evil-motion-state-map "\\gg" 'helm-gtags-find-tag)
 (define-key evil-motion-state-map "\\gr" 'helm-gtags-find-rtag)
 
