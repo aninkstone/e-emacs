@@ -2,6 +2,7 @@
 ;;el-get config
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
+
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -23,7 +24,11 @@
    helm-gtags            ; helm-gtags
    auto-complete         ; complete as you type with overlays
    ido-vertical-mode     ; ido vertical
+   powerline             ; emacs power line
    color-theme-tangotango-improve))   ; check out color-theme-solarized
+
+;;helm-ls-git
+(el-get-bundle helm-ls-git :url "https://github.com/emacs-helm/helm-ls-git.git" :features helm-ls-git)
 
 ;; Some recipes require extra tools to be installed
 ;;

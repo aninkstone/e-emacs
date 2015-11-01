@@ -105,8 +105,6 @@
               ;; Finish repeation
               (evil-repeat-finish-record-changes))))))
 
-(evil-mode 1)
-
 ;;;;disable evil default leader map
 (define-key evil-motion-state-map "\\" nil)
 (define-key evil-motion-state-map "\\bb" 'buffer-menu)
@@ -135,3 +133,5 @@
 ;;;; enable hightlight-symbol
 ;;(add-to-list 'load-path "~/.emacs.d/addons.st/highlight-symbol")
 ;;(require 'highlight-symbol)
+
+(evil-mode 1)
