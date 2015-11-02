@@ -18,11 +18,11 @@
 (setq
  emitX:el-get-packages
  '(el-get                ; el-get is self-hosting
+   auto-complete         ; complete as you type with overlays
    evil                  ; vi emulator
    magit                 ; emacs git client
-   helm                  ; helm
    helm-gtags            ; helm-gtags
-   auto-complete         ; complete as you type with overlays
+   helm                  ; helm
    ido-vertical-mode     ; ido vertical
    powerline             ; emacs power line
    color-theme-tangotango-improve))   ; check out color-theme-solarized
@@ -117,4 +117,8 @@
 (setq split-height-threshold 0)
 (setq split-width-threshold nil)
 
-(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
+(set-face-attribute 'default nil :family "Inconsolata" :height 156 :weight 'normal)
+
+
+;;org-mode init
+(load-file "~/.emacs.d/package.el/init-org-mode.el")
