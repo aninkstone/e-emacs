@@ -27,9 +27,6 @@
    powerline             ; emacs power line
    color-theme-tangotango-improve))   ; check out color-theme-solarized
 
-;;helm-ls-git
-(el-get-bundle helm-ls-git :url "https://github.com/emacs-helm/helm-ls-git.git" :features helm-ls-git)
-
 ;; Some recipes require extra tools to be installed
 ;;
 ;; Note: el-get-install requires git, so we know we have at least that.
