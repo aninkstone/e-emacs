@@ -1,0 +1,7 @@
+(:name spacemacs-theme
+       :website "https://github.com/nashamri/spacemacs-theme.git"
+       :description "spacemacs-theme"
+       :type github
+       :pkgname "nashamri/spacemacs-theme"
+       :branch "master"
+       :minimum-emacs-version "24.4")
