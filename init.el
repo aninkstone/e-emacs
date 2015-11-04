@@ -2,7 +2,6 @@
 ;;el-get config
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -117,8 +116,7 @@
 (setq split-height-threshold 0)
 (setq split-width-threshold nil)
 
-(set-face-attribute 'default nil :family "Inconsolata" :height 156 :weight 'normal)
-
-
 ;;org-mode init
 (load-file "~/.emacs.d/package.el/init-org-mode.el")
+
+(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
