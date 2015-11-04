@@ -24,7 +24,9 @@
    helm                  ; helm
    ido-vertical-mode     ; ido vertical
    powerline             ; emacs power line
-   color-theme-tangotango-improve))   ; check out color-theme-solarized
+   spacemacs-theme))     ; spacemacs-theme
+
+   ;;color-theme-tangotango-improve))   ; check out color-theme-solarized
 
 ;; Some recipes require extra tools to be installed
 ;;
