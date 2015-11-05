@@ -1,0 +1,7 @@
+(:name jabber
+       :website "https://github.com/legoscia/emacs-jabber.git"
+       :description "jabber"
+       :type github
+       :pkgname "legoscia/emacs-jabber"
+       :branch "master"
+       :minimum-emacs-version "23.0")
