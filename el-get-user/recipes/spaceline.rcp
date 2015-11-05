@@ -1,0 +1,8 @@
+(:name spaceline
+       :website "https://github.com/TheBB/spaceline.git"
+       :description "spaceline"
+       :type github
+       :pkgname "TheBB/spaceline"
+       :branch "master"
+       :depends (s)
+       :minimum-emacs-version "24.4")

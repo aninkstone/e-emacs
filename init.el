@@ -17,16 +17,16 @@
 (setq
  emitX:el-get-packages
  '(el-get                ; el-get is self-hosting
+   powerline             ; emacs power line
    auto-complete         ; complete as you type with overlays
-   evil                  ; vi emulator
    magit                 ; emacs git client
    helm-gtags            ; helm-gtags
    helm                  ; helm
    ido-vertical-mode     ; ido vertical
-   powerline             ; emacs power line
-   spacemacs-theme))     ; spacemacs-theme
-
-   ;;color-theme-tangotango-improve))   ; check out color-theme-solarized
+   spacemacs-theme       ; spacemacs theme
+   spaceline             ; spaceline
+   ;color-theme-tangotango-improve ; check out color-theme-solarized
+   evil))                ; vi emulator
 
 ;; Some recipes require extra tools to be installed
 ;;
@@ -121,4 +121,4 @@
 ;;org-mode init
 (load-file "~/.emacs.d/package.el/init-org-mode.el")
 
-(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
+;;(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
