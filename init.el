@@ -47,6 +47,7 @@
 (define-key master-sense-map (kbd "r") 'rgrep)
 (define-key master-sense-map (kbd "gg") 'helm-gtags-find-tag)
 (define-key master-sense-map (kbd "gr") 'helm-gtags-find-rtag)
+(define-key master-sense-map (kbd "t") 'helm-imenu)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -80,6 +81,8 @@
      ("\\.hpp$"                . c++-mode)
      ("\\.h[r]?[0-9]*[a-z]?$"  . c++-mode))
     auto-mode-alist))
+
+(global-hl-line-mode t)
 
 ;; Put this one at the front of the list to override the default
 ;; c-mode association.
