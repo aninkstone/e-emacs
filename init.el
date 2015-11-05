@@ -17,17 +17,18 @@
 (setq
  emitX:el-get-packages
  '(el-get                ; el-get is self-hosting
-   powerline             ; emacs power line
+   evil                  ; vi emulator
    auto-complete         ; complete as you type with overlays
-   magit                 ; emacs git client
-   helm-gtags            ; helm-gtags
    helm                  ; helm
-   ido-vertical-mode     ; ido vertical
+   helm-gtags            ; helm-gtags
+   powerline             ; emacs power line
    spacemacs-theme       ; spacemacs theme
    spaceline             ; spaceline
    switch-window         ; switch window
+   ido-vertical-mode     ; ido vertical
+   projectile            ; projectile
    ;color-theme-tangotango-improve ; check out color-theme-solarized
-   evil))                ; vi emulator
+   magit))                ; emacs git client
 
 ;; Some recipes require extra tools to be installed
 ;;
