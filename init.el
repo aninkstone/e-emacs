@@ -25,6 +25,7 @@
    ido-vertical-mode     ; ido vertical
    spacemacs-theme       ; spacemacs theme
    spaceline             ; spaceline
+   switch-window         ; switch window
    ;color-theme-tangotango-improve ; check out color-theme-solarized
    evil))                ; vi emulator
 
