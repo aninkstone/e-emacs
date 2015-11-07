@@ -27,6 +27,7 @@
    switch-window         ; switch window
    ido-vertical-mode     ; ido vertical
    projectile            ; projectile
+   highlight-symbol      ; highlight-symbol
    ;color-theme-tangotango-improve ; check out color-theme-solarized
    magit))                ; emacs git client
 
