@@ -119,7 +119,7 @@
 (define-key evil-motion-state-map "\\gs" 'magit-status)
 (define-key evil-motion-state-map "\\gl" 'magit-log)
 
-(define-key evil-motion-state-map "\\m" 'highlight-symbol-at-point)
+(define-key evil-motion-state-map "\\m" 'highlight-symbol)
 (define-key evil-motion-state-map "\\n" 'highlight-symbol-remove-all)
 
 (evil-mode 1)
