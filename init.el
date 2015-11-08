@@ -21,7 +21,7 @@
    auto-complete         ; complete as you type with overlays
    helm                  ; helm
    helm-gtags            ; helm-gtags
-   powerline             ; emacs power line
+   powerline             ; powerline
    spacemacs-theme       ; spacemacs theme
    spaceline             ; spaceline
    switch-window         ; switch window
@@ -126,5 +126,6 @@
 
 ;;org-mode init
 (load-file "~/.emacs.d/package.el/init-org-mode.el")
+(load-file "~/.emacs.d/package.el/init-ede-mode.el")
 
 ;;(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
