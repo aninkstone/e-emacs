@@ -122,10 +122,10 @@
          :html-postamble ""          ; your personal postamble
          :style-include-default nil  ; Disable the default css style
          )
-        ("org-emitX"                                                  ;Used to export .org file
-         :base-directory "d:/Gits/emitX/doc/"                         ;directory holds .org files 
+        ("org-home"                                                   ;Used to export .org file
+         :base-directory "/Volumes/E/org-base/"                         ;directory holds .org files 
          :base-extension "org"                                        ;process .org file only    
-         :publishing-directory "d:/Gits/emitX/doc/publish-html/"            ;export destination
+         :publishing-directory "publish-html/"            ;export destination
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 6          ; Just the default for this project.
