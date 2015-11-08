@@ -110,7 +110,7 @@
          :publishing-function org-html-publish-to-html
          :headline-levels 6          ; Just the default for this project.
          :auto-preamble nil          ; Disable auto preamble 
-         :html-preamble "<div class=\"navbar navbar-inverse navbar-fixed-top\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"index.html\">绋昏崏浜?/a><ul class=\"nav\"><li><a href=\"index.html\">涓婚〉</a></li><li><a href=\"aboutme.html\">鍏充簬</a></li></ul></div></div>"
+         :html-preamble "<div class=\"navbar navbar-inverse navbar-fixed-top\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"index.html\">Navi</a><ul class=\"nav\"><li><a href=\"index.html\">Home</a></li><li><a href=\"aboutme.html\">About</a></li></ul></div></div>"
          :auto-sitemap nil                  ; Generate sitemap.org automagically...
          :sitemap-filename "sitemap.org"    ; call it sitemap.org (it's the default)...
          :sitemap-title "Sitemap"           ; with title 'Sitemap'.
@@ -130,7 +130,7 @@
          :publishing-function org-html-publish-to-html
          :headline-levels 6          ; Just the default for this project.
          :auto-preamble nil          ; Disable auto preamble 
-         :html-preamble "<div class=\"navbar navbar-inverse navbar-fixed-top\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"index.html\">绋昏崏浜?/a><ul class=\"nav\"><li><a href=\"index.html\">涓婚〉</a></li><li><a href=\"aboutme.html\">鍏充簬</a></li></ul></div></div>"
+         :html-preamble "<div class=\"navbar navbar-inverse navbar-fixed-top\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"index.html\">Navi</a><ul class=\"nav\"><li><a href=\"index.html\">Home</a></li><li><a href=\"aboutme.html\">About</a></li></ul></div></div>"
          :auto-sitemap nil                  ; Generate sitemap.org automagically...
          :sitemap-filename "sitemap.org"    ; call it sitemap.org (it's the default)...
          :sitemap-title "Sitemap"           ; with title 'Sitemap'.
