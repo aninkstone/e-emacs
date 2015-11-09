@@ -103,9 +103,9 @@
 (setq org-publish-project-alist
       '(
         ("org-htmls"                                                  ;Used to export .org file
-         :base-directory "~/.emacs.d/org-mode/orgs/"                  ;directory holds .org files 
+         :base-directory "~/.emacs.d/org-mode/"                  ;directory holds .org files 
          :base-extension "org"                                        ;process .org file only    
-         :publishing-directory "~/.emacs.d/org-mode/publish-html/"            ;export destination
+         :publishing-directory "publish-html/"            ;export destination
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 6          ; Just the default for this project.
