@@ -28,6 +28,8 @@
    ido-vertical-mode     ; ido vertical
    projectile            ; projectile
    highlight-symbol      ; highlight-symbol
+   yasnippet             ; yasnippet
+   yasnippet-snippets    ; yasnippet templates
    ;color-theme-tangotango-improve ; check out color-theme-solarized
    magit))                ; emacs git client
 
