@@ -50,9 +50,9 @@
 ;;org-mode setup refile
 ;;=======================================================================================
 
-;;(if (boundp 'org-directory)
-;;    (message "Set org-directory to ~/Documents/orgs")
-;;  (setq org-directory "~/Documents/orgs"))
+(if (boundp 'org-directory)
+    (message "Set org-directory to G:/ogers/orgs")
+  (setq org-directory "G:/ogers/orgs"))
 
 ;;(setq org-default-notes-file (concat org-directory "/note.org"))
 ;;(setq org-agenda-files (list (concat org-directory "/jobs.org")
@@ -97,30 +97,45 @@
 
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
 
-(setq org-site-path "~/.emacs.d/org-mode/")
-;;(setq org-default-notes-file (concat org-directory "/note.org"))
-
 (setq org-publish-project-alist
       '(
-        ("org-htmls"                             ;Used to export .org file
-         :base-directory "./"                    ;directory holds .org files 
+        ("org-htmls1"                             ;Used to export .org file
+         :base-directory "G:/Ogers/"                    ;directory holds .org files 
+         :publishing-directory "G:/Ogers/publish-html/" ;export destination
          :base-extension "org"                   ;process .org file only    
-         :publishing-directory "./publish-html/" ;export destination
          :recursive t
          :publishing-function org-html-publish-to-html
          :html-preamble '(with-temp-buffer (insert-file-contents "./html-preamble.html") (buffer-string))
          :table-of-contents nil
          :html-postamble ""          ; your personal postamble
          )
-        ("org-static"                ;Used to publish static files
-         :base-directory "./publish-html/static"
+        ("org-static1"                ;Used to publish static files
+         :publishing-directory "G:/Ogers/publish-html/"
+         :base-directory "G:/Ogers/publish-html/static"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "f:/Code/ogers/publish-html/"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("org-htmls2"                             ;Used to export .org file
+         :base-directory "G:/Ogers/"                    ;directory holds .org files 
+         :publishing-directory "G:/Ogers/publish-html/" ;export destination
+         :base-extension "org"                   ;process .org file only    
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :html-preamble '(with-temp-buffer (insert-file-contents "./html-preamble.html") (buffer-string))
+         :table-of-contents nil
+         :html-postamble ""          ; your personal postamble
+         )
+        ("org-static2"                ;Used to publish static files
+         :publishing-directory "G:/Ogers/publish-html/"
+         :base-directory "G:/Ogers/publish-html/static"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
          :recursive t
          :publishing-function org-publish-attachment
          )
 
-        ("org" :components ("org-htmls" "org-static")) ;combine "org-htmls" and "org-static" into one function call
+        ("path1" :components ("org-htmls1" "org-static1")) ;combine "org-htmls" and "org-static" into one function call
+        ("path2" :components ("org-htmls2" "org-static2")) ;combine "org-htmls" and "org-static" into one function call
         ))
 
 (defun org-html-template (contents info)
@@ -168,9 +183,10 @@ holding export options."
     <span class=\"icon-bar\"></span>
     <span class=\"icon-bar\"></span>
     </button>
-    <a class=\"navbar-brand\" href=\"#\">Brand</a>
+    <a class=\"navbar-brand\" href=\"/index.html\">Home</a>
 </div>
 <!-- Collect the nav links, forms, and other content for toggling -->
+<!--
 <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
     <ul class=\"nav navbar-nav\">
     <li class=\"active\"><a href=\"#\">Link <span class=\"sr-only\">(current)</span></a></li>
@@ -188,12 +204,6 @@ holding export options."
         </ul>
     </li>
     </ul>
-    <form class=\"navbar-form navbar-left\" role=\"search\">
-    <div class=\"form-group\">
-        <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
-    </div>
-    <button type=\"submit\" class=\"btn btn-default\">Submit</button>
-    </form>
     <ul class=\"nav navbar-nav navbar-right\">
     <li><a href=\"#\">Link</a></li>
     <li class=\"dropdown\">
@@ -207,6 +217,13 @@ holding export options."
         </ul>
     </li>
     </ul>
+-->
+    <form class=\"navbar-form navbar-right\" role=\"search\">
+    <div class=\"form-group\">
+        <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
+    </div>
+    <button type=\"submit\" class=\"btn btn-default\">Submit</button>
+    </form>
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>"
@@ -223,9 +240,9 @@ holding export options."
    (org-html--build-pre/postamble 'preamble info)
    ;; Big head
    "<div class=\"jumbotron\">"
-   "<h1>Hello, world!</h1>"
+   "<h1>Coding, world!</h1>"
    "<p>...</p>"
-   "<p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a></p>"
+   "<p><a class=\"btn btn-primary btn-lg\" href=\"mailto:thatways.c@aliyu.com\" role=\"button\">Contect me</a></p>"
    "</div>"
    ;; Document contents.
    (format "<%s id=\"%s\">\n"
