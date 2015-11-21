@@ -117,8 +117,8 @@
          :publishing-function org-publish-attachment
          )
         ("org-htmls2"                             ;Used to export .org file
-         :base-directory "G:/Ogers/"                    ;directory holds .org files 
-         :publishing-directory "G:/Ogers/publish-html/" ;export destination
+         :base-directory "~/Development/Ogers/"                    ;directory holds .org files 
+         :publishing-directory "~/Development/Ogers/publish-html/" ;export destination
          :base-extension "org"                   ;process .org file only    
          :recursive t
          :publishing-function org-html-publish-to-html
@@ -127,8 +127,8 @@
          :html-postamble ""          ; your personal postamble
          )
         ("org-static2"                ;Used to publish static files
-         :publishing-directory "G:/Ogers/publish-html/"
-         :base-directory "G:/Ogers/publish-html/static"
+         :publishing-directory "~/Development/Ogers/publish-html/"
+         :base-directory "~/Development/Ogers/publish-html/static"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
          :recursive t
          :publishing-function org-publish-attachment
