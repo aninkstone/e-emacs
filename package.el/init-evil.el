@@ -118,6 +118,9 @@
 ;;magit key binding
 (define-key evil-motion-state-map "\\gs" 'magit-status)
 (define-key evil-motion-state-map "\\gl" 'magit-log)
+(define-key evil-motion-state-map "\\gb" 'magit-branch-manager)
+(define-key evil-motion-state-map "\\gf" 'magit-pull)
+(define-key evil-motion-state-map "\\gp" 'magit-push)
 
 (define-key evil-motion-state-map "\\m" 'highlight-symbol)
 (define-key evil-motion-state-map "\\n" 'highlight-symbol-remove-all)
