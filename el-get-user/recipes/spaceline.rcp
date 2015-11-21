@@ -4,5 +4,5 @@
        :type github
        :pkgname "TheBB/spaceline"
        :branch "master"
-       :depends (s)
+       :depends (s dash)
        :minimum-emacs-version "24.4")
