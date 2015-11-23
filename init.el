@@ -141,3 +141,6 @@
 ;;(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
 ;;(setq default-sendmail-coding-system 'utf-8-unix)
 ;;(setq default-terminal-coding-system 'utf-8-unix)
+
+;;scrolling setup
+(setq scroll-step 1 scroll-conservatively 10000)
