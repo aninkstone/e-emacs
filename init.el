@@ -17,6 +17,7 @@
 (setq
  emitX:el-get-packages
  '(el-get                ; el-get is self-hosting
+   linum+                ; improve linum mode
    dired-k               ; dired-k
    evil                  ; vi emulator
    auto-complete         ; complete as you type with overlays
@@ -132,3 +133,11 @@
 (load-file "~/.emacs.d/package.el/init-ede-mode.el")
 
 ;;(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
+
+;;default code page setting
+(setq default-buffer-file-coding-system 'utf-8-unix)
+(setq default-file-name-coding-system 'utf-8-unix)
+;;(setq default-keyboard-coding-system 'utf-8-unix)
+;;(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+;;(setq default-sendmail-coding-system 'utf-8-unix)
+;;(setq default-terminal-coding-system 'utf-8-unix)
