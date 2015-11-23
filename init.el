@@ -17,6 +17,7 @@
 (setq
  emitX:el-get-packages
  '(el-get                ; el-get is self-hosting
+   dired-k               ; dired-k
    evil                  ; vi emulator
    auto-complete         ; complete as you type with overlays
    helm                  ; helm

@@ -20,13 +20,10 @@
                               (gtags-select-mode            . emacs)
                               (shell-mode                   . emacs)
                               (eshell-mode                  . emacs)
-                              (term-mode                    . emacs)
-                              (rdictcc-buffer-mode          . emacs)
-                              ;;(org-mode                     . emacs)
-                              (cscope-list-entry-mode       . emacs) ;;FIMXE: doesn't work
                               (erc-mode                     . emacs))
       do (evil-set-initial-state mode state))
 
+                              ;;(org-mode                     . emacs)
                               ;;(magit-branch-manager-mode    . emacs)
                               ;;(semantic-symref-results-mode . emacs)
                               ;;(bs-mode                      . emacs)
@@ -187,3 +184,8 @@
       (evil-search string forward t)))))
 
 (define-key evil-motion-state-map "*" 'evil-search-symbol-forward)
+
+;;dired-k enable
+(eval-after-load 'dired
+  '(evil-define-key 'normal dired-mode-map
+     (kbd "g") 'dired-k))
