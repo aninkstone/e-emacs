@@ -135,6 +135,7 @@
 ;;(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
 
 ;;default code page setting
+(prefer-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8-unix)
 (setq default-file-name-coding-system 'utf-8-unix)
 ;;(setq default-keyboard-coding-system 'utf-8-unix)
