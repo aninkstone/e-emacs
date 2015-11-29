@@ -24,3 +24,5 @@
 
              (setq ac-sources (append '(ac-source-semantic ac-source-features ac-source-functions ac-source-yasnippet ac-source-variables ac-source-symbols) ac-sources))
              ))
+
+(setq ac-auto-start nil) (ac-set-trigger-key "TAB")
