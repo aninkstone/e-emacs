@@ -1,0 +1,8 @@
+(:name moe-theme
+       :website "https://github.com/kuanyui/moe-theme.el"
+       :description "moe-theme"
+       :type github
+       :pkgname "kuanyui/moe-theme.el"
+       :branch "master"
+       :depends (powerline markdown-mode)
+       :minimum-emacs-version "23.0")

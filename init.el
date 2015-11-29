@@ -21,6 +21,7 @@
    dired-k               ; dired-k
    evil                  ; vi emulator
    auto-complete         ; complete as you type with overlays
+   ;;moe-theme             ; 
    helm                  ; helm
    helm-gtags            ; helm-gtags
    powerline             ; powerline
