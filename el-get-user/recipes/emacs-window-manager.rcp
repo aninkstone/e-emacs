@@ -1,0 +1,8 @@
+(:name emacs-window-manager
+       :website "https://github.com/kiwanami/emacs-window-manager.git"
+       :description "emacs-window-manager"
+       :type github
+       :pkgname "kiwanami/emacs-window-manager"
+       :branch "master"
+       :depends (window-layout)
+       :minimum-emacs-version "23.0")

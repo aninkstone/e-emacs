@@ -23,6 +23,9 @@
                               (erc-mode                     . emacs))
       do (evil-set-initial-state mode state))
 
+                              ;;(e2wm:def-plugin-files-mode   . emacs)
+                              ;;(e2wm:def-plugin-imenu-mode   . emacs)
+                              ;;(e2wm:def-plugin-history-list-mode   . emacs)
                               ;;(org-mode                     . emacs)
                               ;;(magit-branch-manager-mode    . emacs)
                               ;;(semantic-symref-results-mode . emacs)
@@ -189,3 +192,12 @@
 (eval-after-load 'dired
   '(evil-define-key 'normal dired-mode-map
      (kbd "g") 'dired-k))
+
+(eval-after-load 'e2wm
+  '(progn
+     (evil-define-key 'normal e2wm:def-plugin-imenu-mode-map
+       (kbd "RET") 'e2wm:def-plugin-imenu-jump-command)
+     (evil-define-key 'normal e2wm:def-plugin-files-mode-map
+       (kbd "RET") 'e2wm:def-plugin-files-select-command)
+     (evil-define-key 'normal e2wm:def-plugin-history-list-mode-map
+       (kbd "RET") 'e2wm:def-plugin-history-list-select-command)))

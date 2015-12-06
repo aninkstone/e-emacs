@@ -33,6 +33,7 @@
    highlight-symbol      ; highlight-symbol
    yasnippet             ; yasnippet
    yasnippet-snippets    ; yasnippet templates
+   emacs-window-manager  ; 
    ;color-theme-tangotango-improve ; check out color-theme-solarized
    magit))                ; emacs git client
 
@@ -55,6 +56,8 @@
 (define-key master-sense-map (kbd "gg") 'helm-gtags-find-tag)
 (define-key master-sense-map (kbd "gr") 'helm-gtags-find-rtag)
 (define-key master-sense-map (kbd "t") 'helm-imenu)
+(define-key master-sense-map (kbd "ww") 'e2wm:start-management)
+(define-key master-sense-map (kbd "wc") 'e2wm:stop-management)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -102,7 +105,6 @@
 
 ;;show current time
 (display-time-mode 1)
-
 ;; set font on linux (ubuntu) 等宽字体设置
 ;;(if (eq system-type 'gnu/linux)
 ;;    (if (display-graphic-p)
@@ -129,10 +131,6 @@
 (setq split-height-threshold 0)
 (setq split-width-threshold nil)
 
-;;org-mode init
-(load-file "~/.emacs.d/package.el/init-org-mode.el")
-(load-file "~/.emacs.d/package.el/init-ede-mode.el")
-
 ;;(set-face-attribute 'default nil :family "Inconsolata" :height 192 :weight 'normal)
 
 ;;default code page setting
@@ -146,3 +144,8 @@
 
 ;;scrolling setup
 (setq scroll-step 1 scroll-conservatively 10000)
+
+;;org-mode init
+(load-file "~/.emacs.d/package.el/init-org-mode.el")
+;;ede-mode init
+(load-file "~/.emacs.d/package.el/init-ede-mode.el")
