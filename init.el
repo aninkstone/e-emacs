@@ -92,7 +92,8 @@
      ("\\.h[r]?[0-9]*[a-z]?$"  . c++-mode))
     auto-mode-alist))
 
-(global-hl-line-mode t)
+;;for good for window manager
+;;(global-hl-line-mode t)
 
 ;; Put this one at the front of the list to override the default
 ;; c-mode association.
