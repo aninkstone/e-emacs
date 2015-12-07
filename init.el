@@ -33,7 +33,7 @@
    highlight-symbol      ; highlight-symbol
    yasnippet             ; yasnippet
    yasnippet-snippets    ; yasnippet templates
-   emacs-window-manager  ; 
+   ;;emacs-window-manager  ; 
    ;color-theme-tangotango-improve ; check out color-theme-solarized
    magit))                ; emacs git client
 
