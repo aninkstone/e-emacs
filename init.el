@@ -150,3 +150,6 @@
 (load-file "~/.emacs.d/package.el/init-org-mode.el")
 ;;ede-mode init
 (load-file "~/.emacs.d/package.el/init-ede-mode.el")
+
+;;wubi
+(load-file "~/.emacs.d/package.el/init-wubi-mode.el")
