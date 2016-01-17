@@ -1,2 +1,2 @@
 (require 'linum+)
-(global-linum-mode nil)
+;;(global-linum-mode nil)
