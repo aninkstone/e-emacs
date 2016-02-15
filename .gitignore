@@ -7,3 +7,9 @@ projectile-bookmarks.eld
 projectile.cache
 semanticdb/*
 tramp
+url
+session.*
+auto-save-list
+ede-projects.el
+eshell
+image-dired
