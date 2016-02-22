@@ -3,7 +3,7 @@
 (require 'semantic/bovine/gcc)
 
 (global-ede-mode t)
-(semantic-mode t)
+;;(semantic-mode t)
 ;;(global-semantic-idle-summary-mode)
 
 (setq qt5-base-dir "/usr/include/qt5")
