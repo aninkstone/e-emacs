@@ -1,0 +1,7 @@
+(:name fuzzy-find
+       :website "https://github.com/silentbicycle/ff"
+       :description "ff"
+       :type github
+       :pkgname "silentbicycle/ff"
+       :branch "master"
+       :minimum-emacs-version "23.0")

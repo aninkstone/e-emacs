@@ -35,7 +35,9 @@
    yasnippet-snippets    ; yasnippet templates
    php-mode              ; php mode
    web-mode              ; php mode
-   ;ac-php                ; 
+   fuzzy-find            ; fuzzy find
+   helm-fuzzy-find       ; helm fuzzy find
+   ;ac-php               ; 
    ;;emacs-window-manager  ; 
    ;color-theme-tangotango-improve ; check out color-theme-solarized
    magit))                ; emacs git client

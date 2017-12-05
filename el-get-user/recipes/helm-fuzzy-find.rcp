@@ -1,0 +1,7 @@
+(:name helm-fuzzy-find
+       :website "https://github.com/xuchunyang/helm-fuzzy-find.git"
+       :description "helm-fuzzy-find"
+       :type github
+       :pkgname "xuchunyang/helm-fuzzy-find"
+       :branch "master"
+       :minimum-emacs-version "23.0")
