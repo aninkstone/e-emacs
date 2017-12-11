@@ -61,9 +61,10 @@
 (define-key master-sense-map (kbd "gg") 'helm-gtags-find-tag)
 (define-key master-sense-map (kbd "gr") 'helm-gtags-find-rtag)
 (define-key master-sense-map (kbd "gc") 'helm-gtags-create-tags)
-(define-key master-sense-map (kbd "t") 'helm-semantic-or-imenu)
+(define-key master-sense-map (kbd "t")  'helm-semantic-or-imenu)
 (define-key master-sense-map (kbd "ww") 'e2wm:start-management)
 (define-key master-sense-map (kbd "wc") 'e2wm:stop-management)
+(define-key master-sense-map (kbd "f")  'helm-fuzzy-find)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
